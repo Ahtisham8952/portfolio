@@ -1,7 +1,8 @@
 import { Box, Button, Flex, Grid, Text, Image } from "@chakra-ui/react";
-import React from "react";
 
-const BlogSection = () => {
+import React, { forwardRef } from 'react';
+import { useSpring, animated } from 'react-spring';
+const BlogSection = forwardRef((props, ref) => {
   const Services = [
     {
       Image: "./blogpostimg.png",
@@ -25,8 +26,15 @@ const BlogSection = () => {
           "In the last five years, one thing has become quite clear: for Pakistan to maintain high sustainable growth, it needs dollars, especially through exports. That’s where the IT sector has stood out: without much governmental support,",
       },
   ];
+  const animationProps = useSpring({
+    opacity: 1,
+    transform: 'translateY(0)',
+    from: { opacity: 0, transform: 'translateY(50px)' },
+    delay: 400, // Adjust delay as needed
+  });
   return (
-    <Box bg="#242424" py={{ base: "100px", lg: "147px" }}>
+    <animated.div style={animationProps}>
+    <Box bg="#242424" py={{ base: "100px", lg: "147px" }} ref={ref}>
       <Box mx="auto" maxW={"1566px"} w="100%" px="40px">
         <Box >
           <Text
@@ -126,7 +134,8 @@ py="60px"
         
       </Box>
     </Box>
+    </animated.div>
   );
-};
+})
 
 export default BlogSection;

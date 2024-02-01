@@ -32,7 +32,7 @@ export const Philipfolio = () => {
         right="68px"
         position="fixed"
         transform="translateY(-50%)"
-        p="24px"
+        p="20px"
         top="50%"
         display="flex"
         flexDirection="column"
@@ -40,11 +40,11 @@ export const Philipfolio = () => {
         <Box onClick={() => scrollToRef(servicesRef)}>
           <Image src="/sidebaricon1.svg" />
         </Box>
-        <Box onClick={() => scrollToRef(projectsRef)}>
-          <Image src="/sidebaricon1.svg" />
+        <Box onClick={() => scrollToRef(servicesRef)}>
+          <Image src="/mainservice.svg" />
         </Box>
         <Box onClick={() => scrollToRef(blogRef)}>
-          <Image src="/sidebaricon1.svg" />
+          <Image src="./sidebaricon1.svg" />
         </Box>
         <Box onClick={() => scrollToRef(featuredVideosRef)}>
           <Image src="/sidebaricon1.svg" />
