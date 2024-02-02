@@ -6,11 +6,15 @@ import ProjectsSection from './ProjectsSection';
 import BlogSection from './BlogSection';
 import FeaturedVideos from './FeaturedVideos';
 
+import AwardsSection from './AwardsSection';
+
 export const Philipfolio = () => {
+  const heroRef = useRef(null);
   const servicesRef = useRef(null);
   const projectsRef = useRef(null);
   const blogRef = useRef(null);
   const featuredVideosRef = useRef(null);
+  const awardsRef = useRef(null);
 
   const scrollToRef = (ref) => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
@@ -19,11 +23,13 @@ export const Philipfolio = () => {
   return (
     <Box position="relative">
       <Box>
-        <HeroSection />
+        <HeroSection ref={heroRef} />
         <ServicesSection ref={servicesRef} />
         <ProjectsSection ref={projectsRef} />
         <BlogSection ref={blogRef} />
         <FeaturedVideos ref={featuredVideosRef} />
+       <AwardsSection ref={awardsRef}/>
+      
       </Box>
       <Box
         gap="20px"
@@ -37,17 +43,20 @@ export const Philipfolio = () => {
         display="flex"
         flexDirection="column"
       >
-        <Box onClick={() => scrollToRef(servicesRef)}>
+        <Box onClick={() => scrollToRef(heroRef)}>
           <Image src="/sidebaricon1.svg" />
         </Box>
         <Box onClick={() => scrollToRef(servicesRef)}>
           <Image src="/mainservice.svg" />
         </Box>
         <Box onClick={() => scrollToRef(blogRef)}>
-          <Image src="./sidebaricon1.svg" />
+          <Image src="./blogploticon1.svg" />
         </Box>
         <Box onClick={() => scrollToRef(featuredVideosRef)}>
-          <Image src="/sidebaricon1.svg" />
+          <Image src="/videocicon.svg" />
+        </Box>
+        <Box onClick={() => scrollToRef(awardsRef)}>
+          <Image src="/awardmedal.svg" />
         </Box>
       </Box>
     </Box>

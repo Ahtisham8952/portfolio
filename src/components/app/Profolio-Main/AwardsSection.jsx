@@ -1,7 +1,8 @@
 import { Box, Button, Flex, Grid, Text, Image } from "@chakra-ui/react";
-import React from "react";
+import React, { forwardRef } from "react";
+import { useSpring, animated } from 'react-spring';
 
-const EducationSection = () => {
+const AwardsSection = forwardRef((props, ref) => {
   const Services = [
     {
       date: " 2016-2016",
@@ -42,8 +43,15 @@ const EducationSection = () => {
       },
 
   ]
+  const animationProps = useSpring({
+    opacity: 1,
+    transform: 'translateY(0)',
+    from: { opacity: 0, transform: 'translateY(50px)' },
+    delay: 400, // Adjust delay as needed
+  });
   return (
-    <Box bg="#242424">
+    <animated.div style={animationProps}>
+    <Box bg="#242424" pb={{ base: "100px", lg: "120px" }} ref={ref}>
       <Box mx="auto" maxW={"1566px"} w="100%" >
         <Flex w="100%" gap="24px" flexDirection={{base:'column',lg:'row'}}>
           <Box w={{base:'100%',lg:'50%'}}>
@@ -209,7 +217,8 @@ const EducationSection = () => {
         </Flex>
       </Box>
     </Box>
+    </animated.div>
   );
-};
+})
 
-export default EducationSection;
+export default AwardsSection;

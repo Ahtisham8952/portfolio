@@ -1,9 +1,18 @@
 import { Box, Text } from "@chakra-ui/react";
-import React from "react";
-
-const HeroSection = () => {
+import React, { forwardRef } from 'react';
+import { useSpring, animated } from 'react-spring';
+const HeroSection = forwardRef((props, ref) => {
+  const animationProps = useSpring({
+    opacity: 1,
+    transform: 'translateY(0)',
+    from: { opacity: 0, transform: 'translateY(50px)' },
+    delay: 400, // Adjust delay as needed
+  });
   return (
-    <Box>
+    <animated.div style={animationProps}>
+
+   
+    <Box ref={ref}>
       <Box
         backgroundImage="url('./hero-banner.png')"
         backgroundSize="cover"
@@ -74,7 +83,8 @@ am eager to dedicate my life to transforming lives through innovation.
         </Box>
       </Box>
     </Box>
+    </animated.div>
   );
-};
+})
 
 export default HeroSection;

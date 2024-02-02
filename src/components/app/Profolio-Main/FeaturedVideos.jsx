@@ -1,10 +1,18 @@
 import { Box, Button, Flex, Grid, Text, Image } from "@chakra-ui/react";
-import React from "react";
+import React, { forwardRef } from 'react';
+import { useSpring, animated } from 'react-spring';
 import VideoSlider from "./VideoSlider";
-import EducationSection from "./EducationSection";
-const FeaturedVideos = () => {
+import EducationSection from "./AwardsSection";
+const FeaturedVideos = forwardRef((props, ref) => {
+  const animationProps = useSpring({
+    opacity: 1,
+    transform: 'translateY(0)',
+    from: { opacity: 0, transform: 'translateY(50px)' },
+    delay: 400, // Adjust delay as needed
+  });
   return (
-    <Box bg="#242424" py={{ base: "100px", lg: "147px" }}>
+    <animated.div style={animationProps}>
+    <Box bg="#242424" py={{ base: "100px", lg: "120px" }} ref={ref}>
       <Box mx="auto" maxW={"1566px"} w="100%" px="40px">
         <Box>
           <Text
@@ -38,11 +46,10 @@ const FeaturedVideos = () => {
           </Box>
         </Box>
       </Box>
-      <Box  mx="auto" maxW={"1566px"} w="100%" px="40px">
-       <EducationSection/>
-      </Box>
+      
     </Box>
+    </animated.div>
   );
-};
+})
 
 export default FeaturedVideos;
