@@ -1,31 +1,56 @@
-import { Box, Button, Flex, Grid, Text, Image } from "@chakra-ui/react";
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useEffect, useState } from 'react';
 import { useSpring, animated } from 'react-spring';
+import { Box, Text } from "@chakra-ui/react";
 import VideoSlider from "./VideoSlider";
-import EducationSection from "./AwardsSection";
+
 const FeaturedVideos = forwardRef((props, ref) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [triggered, setTriggered] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            setTriggered(true);
+          }
+        });
+      },
+      { threshold: 0.5 } // Adjust the threshold as needed
+    );
+
+    observer.observe(ref.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [ref]);
+
   const animationProps = useSpring({
-    opacity: 1,
-    transform: 'translateY(0)',
+    opacity: isVisible ? 1 : 0,
+    transform: isVisible ? 'translateY(0)' : 'translateY(50px)',
     from: { opacity: 0, transform: 'translateY(50px)' },
-    delay: 400, // Adjust delay as needed
+    delay: triggered ? 400 : 0, // Delay animation if triggered
   });
+
   return (
-    <animated.div style={animationProps}>
     <Box bg="#242424" py={{ base: "100px", lg: "120px" }} ref={ref}>
-      <Box mx="auto" maxW={"1566px"} w="100%" px="40px">
+      <Box mx="auto" maxW={{ base: "480px", md: "768px", lg: "991px",xl:'1280px',xxl:'1440px',xxxl:'1560px' }} w="100%" px="40px">
         <Box>
-          <Text
-            fontWeight="600"
-            fontSize="44px"
-            lineHeight="56px"
-            color="#FFFFFF"
-            mb="7px"
-            fontFamily="inter"
-            textAlign={"center"}
-          >
-            Featured Videos
-          </Text>
+          <animated.div style={animationProps}>
+            <Text
+              fontWeight="600"
+              fontSize="44px"
+              lineHeight="56px"
+              color="#FFFFFF"
+              mb="7px"
+              fontFamily="inter"
+              textAlign={"center"}
+            >
+              Featured Videos
+            </Text>
+          </animated.div>
         </Box>
       </Box>
       <Box
@@ -46,10 +71,8 @@ const FeaturedVideos = forwardRef((props, ref) => {
           </Box>
         </Box>
       </Box>
-      
     </Box>
-    </animated.div>
   );
-})
+});
 
 export default FeaturedVideos;

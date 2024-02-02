@@ -1,4 +1,5 @@
 import { Box, Text } from "@chakra-ui/react";
+import { MotionBox } from '@chakra-ui/react';
 import React, { forwardRef } from 'react';
 import { useSpring, animated } from 'react-spring';
 const HeroSection = forwardRef((props, ref) => {
@@ -19,7 +20,8 @@ const HeroSection = forwardRef((props, ref) => {
         backgroundPosition="right"
         backgroundRepeat="no-repeat"
         width="100%"
-        height="631px"
+        // height="631px"
+        h={{base:'600px',md:'600px',lg:'441px',xl:'519px',xxl:'572px',xxxl:'631'}}
       >
         <Box
           mx="auto"
@@ -33,7 +35,8 @@ const HeroSection = forwardRef((props, ref) => {
           h="100%"
         >
           <Box>
-            <Box mb="27px">
+
+              <Box mb="27px">
             <Text
               fontWeight="600"
               fontSize="44px"
@@ -55,6 +58,8 @@ const HeroSection = forwardRef((props, ref) => {
               Thought Leader, Tech Entrepreneur, Investor
             </Text>
             </Box>
+    
+         
             <Box mb="27px">
             <Text
               fontWeight="600"

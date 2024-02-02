@@ -35,7 +35,7 @@ const BlogSection = forwardRef((props, ref) => {
   return (
     <animated.div style={animationProps}>
     <Box bg="#242424" py={{ base: "100px", lg: "147px" }} ref={ref}>
-      <Box mx="auto" maxW={"1566px"} w="100%" px="40px">
+    <Box mx="auto" maxW={{ base: "480px", md: "768px", lg: "991px",xl:'1280px',xxl:'1440px',xxxl:'1560px' }} w="100%" px="40px">
         <Box >
           <Text
             fontWeight="600"

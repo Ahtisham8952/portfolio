@@ -1,12 +1,12 @@
-import { Box, Image } from '@chakra-ui/react';
-import React, { useRef } from 'react';
+import { Box, Image, Tooltip } from '@chakra-ui/react';
+import React, { useRef, useState } from 'react';
 import HeroSection from './HeroSection';
 import ServicesSection from './ServicesSection';
 import ProjectsSection from './ProjectsSection';
 import BlogSection from './BlogSection';
 import FeaturedVideos from './FeaturedVideos';
-
 import AwardsSection from './AwardsSection';
+import TestimonialSection from './TestimonialSection';
 
 export const Philipfolio = () => {
   const heroRef = useRef(null);
@@ -15,9 +15,16 @@ export const Philipfolio = () => {
   const blogRef = useRef(null);
   const featuredVideosRef = useRef(null);
   const awardsRef = useRef(null);
+  const testimonialRef = useRef(null);
+
+  const [activeSection, setActiveSection] = useState(null);
 
   const scrollToRef = (ref) => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleSetActiveSection = (sectionRef) => {
+    setActiveSection(sectionRef);
   };
 
   return (
@@ -28,8 +35,8 @@ export const Philipfolio = () => {
         <ProjectsSection ref={projectsRef} />
         <BlogSection ref={blogRef} />
         <FeaturedVideos ref={featuredVideosRef} />
-       <AwardsSection ref={awardsRef}/>
-      
+        <AwardsSection ref={awardsRef} />
+        <TestimonialSection ref={testimonialRef} />
       </Box>
       <Box
         gap="20px"
@@ -43,21 +50,38 @@ export const Philipfolio = () => {
         display="flex"
         flexDirection="column"
       >
-        <Box onClick={() => scrollToRef(heroRef)}>
-          <Image src="/sidebaricon1.svg" />
+         <Tooltip label="Home" aria-label="Home" placement="left" hasArrow>
+
+         
+        <Box onClick={() => { scrollToRef(heroRef); handleSetActiveSection(heroRef); }} >
+          <Image src={activeSection === heroRef ? "/subgreen1.svg" : "/sidebaricon1.svg"} />
         </Box>
-        <Box onClick={() => scrollToRef(servicesRef)}>
-          <Image src="/mainservice.svg" />
+        </Tooltip>
+        <Tooltip label="Services" aria-label="Services" placement="left" hasArrow>
+        <Box onClick={() => { scrollToRef(servicesRef); handleSetActiveSection(servicesRef); }}>
+          <Image src={activeSection === servicesRef ? "/subgreen2.svg" : "/mainservice.svg"} />
         </Box>
-        <Box onClick={() => scrollToRef(blogRef)}>
-          <Image src="./blogploticon1.svg" />
+        </Tooltip>
+        <Tooltip label="Blogs" aria-label="Blogs" placement="left" hasArrow>
+        <Box onClick={() => { scrollToRef(blogRef); handleSetActiveSection(blogRef); }}>
+          <Image src={activeSection === blogRef ? "/subgreen3.svg" : "/blogploticon1.svg"} />
         </Box>
-        <Box onClick={() => scrollToRef(featuredVideosRef)}>
-          <Image src="/videocicon.svg" />
+        </Tooltip>
+        <Tooltip label="Videos" aria-label="Videos" placement="left" hasArrow>
+        <Box onClick={() => { scrollToRef(featuredVideosRef); handleSetActiveSection(featuredVideosRef); }}>
+          <Image src={activeSection === featuredVideosRef ? "/subgreen4.svg" : "/videocicon.svg"} />
         </Box>
-        <Box onClick={() => scrollToRef(awardsRef)}>
-          <Image src="/awardmedal.svg" />
+        </Tooltip>
+        <Tooltip label="Awards" aria-label="Awards" placement="left" hasArrow>
+        <Box onClick={() => { scrollToRef(awardsRef); handleSetActiveSection(awardsRef); }}>
+          <Image src={activeSection === awardsRef ? "/subgreenaward.svg" : "/awardmedal.svg"} />
         </Box>
+        </Tooltip>
+        <Tooltip label="Testimonials" aria-label="Testimonials" placement="left" hasArrow>
+        <Box onClick={() => { scrollToRef(testimonialRef); handleSetActiveSection(testimonialRef); }}>
+          <Image src={activeSection === testimonialRef ? "/subgreen5.svg" : "/Testimonialicon.svg"} />
+        </Box>
+        </Tooltip>
       </Box>
     </Box>
   );

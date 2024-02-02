@@ -36,7 +36,7 @@ export const mynewtheme = extendTheme({
     lg: "991px",
     xl: "1280px",
     xxl: "1440px",
-    xxxl: "1660",
+    xxxl: "1660px",
   },
   fonts: {
     dinFonts: `"D-DIN", sans-serif`,

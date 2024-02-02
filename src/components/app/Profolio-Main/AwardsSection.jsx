@@ -52,7 +52,7 @@ const AwardsSection = forwardRef((props, ref) => {
   return (
     <animated.div style={animationProps}>
     <Box bg="#242424" pb={{ base: "100px", lg: "120px" }} ref={ref}>
-      <Box mx="auto" maxW={"1566px"} w="100%" >
+    <Box mx="auto" maxW={{ base: "480px", md: "768px", lg: "991px",xl:'1280px',xxl:'1440px',xxxl:'1560px' }} w="100%" px="40px">
         <Flex w="100%" gap="24px" flexDirection={{base:'column',lg:'row'}}>
           <Box w={{base:'100%',lg:'50%'}}>
           

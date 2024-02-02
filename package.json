@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.11",
-    "@chakra-ui/react": "^2.3.5",
+    "@chakra-ui/react": "^2.8.2",
     "@chakra-ui/system": "^2.2.12",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
@@ -26,6 +26,8 @@
     "react-slick": "^0.29.0",
     "react-spring": "^9.7.3",
     "react-youtube": "^10.1.0",
+    "scrollmagic": "^2.0.8",
+    "scrollmagic-plugin-gsap": "^1.0.4",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
