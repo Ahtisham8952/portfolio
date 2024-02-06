@@ -1,4 +1,4 @@
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Image, Text } from "@chakra-ui/react";
 import { MotionBox } from '@chakra-ui/react';
 import React, { forwardRef } from 'react';
 import { useSpring, animated } from 'react-spring';
@@ -98,6 +98,11 @@ const HeroSection = forwardRef((props, ref) => {
             With a passion for tech and a lifelong commitment to nurturing visionary entrepreneurs, I
 am eager to dedicate my life to transforming lives through innovation.
             </Text>
+            </Box>
+            <Box>
+            <Button onClick={() => props.onClick()} mt="10px" bg="#FFFFFF" px="43px" py="16px" color="#000000" borderRadius={"40px"}> 
+            Let’s talk
+                    </Button>
             </Box>
            
           </Box>

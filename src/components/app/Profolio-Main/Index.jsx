@@ -18,6 +18,7 @@ export const Philipfolio = () => {
   const awardsRef = useRef(null);
   const testimonialRef = useRef(null);
   const contactRef = useRef(null);
+ 
 
   const [activeSection, setActiveSection] = useState(null);
 
@@ -32,7 +33,10 @@ export const Philipfolio = () => {
   return (
     <Box position="relative">
       <Box>
-        <HeroSection ref={heroRef} />
+        <HeroSection 
+        ref={heroRef}
+        onClick={() => scrollToRef(contactRef)}
+         />
         <ServicesSection ref={servicesRef} />
         <ProjectsSection ref={projectsRef} />
         <BlogSection ref={blogRef} />
