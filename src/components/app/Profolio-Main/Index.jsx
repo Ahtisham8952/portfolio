@@ -17,6 +17,7 @@ export const Philipfolio = () => {
   const featuredVideosRef = useRef(null);
   const awardsRef = useRef(null);
   const testimonialRef = useRef(null);
+  const contactRef = useRef(null);
 
   const [activeSection, setActiveSection] = useState(null);
 
@@ -38,7 +39,7 @@ export const Philipfolio = () => {
         <FeaturedVideos ref={featuredVideosRef} />
         <AwardsSection ref={awardsRef} />
         <TestimonialSection ref={testimonialRef} />
-        <GetinTouch/>
+        <GetinTouch  ref={contactRef}/>
       </Box>
       <Box
       
@@ -83,6 +84,11 @@ export const Philipfolio = () => {
         <Tooltip label="Testimonials" aria-label="Testimonials" placement="left" hasArrow>
         <Box onClick={() => { scrollToRef(testimonialRef); handleSetActiveSection(testimonialRef); }}>
           <Image src={activeSection === testimonialRef ? "/subgreen5.svg" : "/Testimonialicon.svg"} />
+        </Box>
+        </Tooltip>
+        <Tooltip label="Conatct us" aria-label="Conatct us" placement="left" hasArrow>
+        <Box onClick={() => { scrollToRef(contactRef); handleSetActiveSection(contactRef); }}>
+          <Image src={activeSection === contactRef ? "/conatctgreen.svg" : "/constactwhite.svg"} />
         </Box>
         </Tooltip>
       </Box>
