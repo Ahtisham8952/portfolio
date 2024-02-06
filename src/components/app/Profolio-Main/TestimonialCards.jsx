@@ -33,7 +33,7 @@ const TestimonialCards = () => {
     <Grid
             templateColumns={{
               base: "repeat(1, 1fr)",
-              md: "repeat(2, 1fr)",
+              md: "repeat(1, 1fr)",
               lg: "repeat(2, 1fr)",
               xl: "repeat(2, 1fr)",
               xxl: "repeat(2, 1fr)",
@@ -50,11 +50,12 @@ const TestimonialCards = () => {
                
               >
                 
-                <Flex h="100%" w="100%" alignItems={"flex-start"} gap={{base:'20px',md:'20px',lg:'20px',xl:'20px',xxl:'20px'}}>
-                  <Box w="100%">
+                <Flex flexDirection={{base:'column',lg:'row'}} h="100%" w="100%" alignItems={{base:'center',lg:'flex-start'}} gap={{base:'20px',md:'20px',lg:'20px',xl:'20px',xxl:'20px'}}>
+                  <Box w="100%" display={"flex"} justifyContent={{base:'center',lg:'flex-start'}}>
                     <Image
-                    w={{base:'30px',md:'35px',lg:'40px',xl:'60px',xxl:'94px'}}
-                    h={{base:'30px',md:'35px',lg:'40px',xl:'60px',xxl:'94px'}}
+                   
+                    w={{base:'40px',md:'40px',lg:'65px',xl:'65px',xxl:'94px'}}
+                    h={{base:'40px',md:'40px',lg:'65px',xl:'65px',xxl:'94px'}}
                      src={li.Image}/>
                      
 

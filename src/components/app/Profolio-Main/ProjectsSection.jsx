@@ -12,7 +12,7 @@ const ProjectsSection = () => {
   <Flex
         alignItems={"center"}
         gap="50px"
-        justifyContent={"space-between"}
+        justifyContent={{base:'center',md:'space-between'}}
         flexWrap={{ base: "wrap", md: "nowrap" }}
       >
         <CountAnimation

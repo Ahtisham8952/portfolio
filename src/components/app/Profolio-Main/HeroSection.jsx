@@ -15,7 +15,16 @@ const HeroSection = forwardRef((props, ref) => {
    
     <Box ref={ref}>
       <Box>
-        <Image display={{base:'block',lg:'none'}} src="/philipcenter.png"></Image>
+        {/* <Image display={{base:'block',lg:'none'}} src="/philipcenter.png"></Image> */}
+        <Box
+        backgroundImage={{base:"url('./philipcenter.png')",lg:"none"}}
+        backgroundSize="cover"
+        backgroundPosition="center"
+        backgroundRepeat="no-repeat"
+        width="100%"
+        height={{base:'431px',md:'631px',lg:'auto'}}
+       
+      ></Box>
       </Box>
       <Box bg="#0E0E0E">
 
@@ -47,7 +56,7 @@ const HeroSection = forwardRef((props, ref) => {
             <Text
               fontWeight="600"
               fontSize={{base:'22px',lg:'26px',xl:'28px',xxl:'33px',xxxl:'44px'}}
-              lineHeight="56px"
+              lineHeight={{base:'32px',lg:'34px',xl:'36px',xxl:'46px',xxxl:'56px'}}
               color="#FFFFFF"
               mb="7px"
               fontFamily="inter"
@@ -71,7 +80,7 @@ const HeroSection = forwardRef((props, ref) => {
             <Text
               fontWeight="600"
               fontSize={{base:'22px',lg:'26px',xl:'28px',xxl:'33px',xxxl:'44px'}}
-              lineHeight="56px"
+              lineHeight={{base:'32px',lg:'34px',xl:'36px',xxl:'46px',xxxl:'56px'}}
               color="#FFFFFF"
               mb="7px"
               fontFamily="inter"

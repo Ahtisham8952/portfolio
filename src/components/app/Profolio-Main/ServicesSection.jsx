@@ -33,16 +33,16 @@ const ServicesSection = forwardRef((props, ref) => {
   });
   return (
     <animated.div style={animationProps}>
-    <Box bg="#242424" py={{ base: '100px', lg: '147px' }} ref={ref}>
+    <Box bg="#242424" py={{ base: '40px',md:'50px' ,lg: '60px',xl:'147px' }} ref={ref}>
      <Box mx="auto"
           maxW={"1566px"}
           w="100%"
           px="40px">
-            <Box pb="60px">
+            <Box pb={{base:'20px',lg:'30px',xl:'60px'}}>
             <Text
               fontWeight="600"
-              fontSize="44px"
-              lineHeight="56px"
+              fontSize={{base:'22px',lg:'26px',xl:'28px',xxl:'33px',xxxl:'44px'}}
+              lineHeight={{base:'32px',lg:'34px',xl:'36px',xxl:'46px',xxxl:'56px'}}
               color="#FFFFFF"
               mb="7px"
               fontFamily="inter"
@@ -69,7 +69,7 @@ const ServicesSection = forwardRef((props, ref) => {
                 bg="transparent"
                 borderRadius={"8px"}
                 px={{ base: "20px", md: "30px", lg: "40px" }}
-                py={{ base: "30px", md: "60px", lg: "75px" }}
+                py={{ base: "25px", md: "25px", lg: "35",xl:'45px',xxl:'55px',xxxl:'75px' }}
 
                 
               >

@@ -5,7 +5,7 @@ const GetinTouch = forwardRef((props, ref) => {
   return (
     <Box bg="#0E0E0E" py={{ base: "100px", lg: "120px" }} ref={ref}>
       <Box mx="auto" maxW={"1566px"} w="100%" px="40px">
-        <Flex gap="100px">
+        <Flex gap="100px" flexDirection={{base:'column',md:'row'}}>
           <Box w={{ base: "100%", md: "50%" }}>
             <Box maxW={"680px"} w="100%">
             <Text

@@ -34,13 +34,13 @@ const BlogSection = forwardRef((props, ref) => {
   });
   return (
     <animated.div style={animationProps}>
-    <Box bg="#242424" py={{ base: "100px", lg: "147px" }} ref={ref}>
+    <Box bg="#242424" py={{ base: '40px',md:'50px' ,lg: '60px',xl:'147px' }} ref={ref}>
     <Box mx="auto" maxW={{ base: "480px", md: "768px", lg: "991px",xl:'1280px',xxl:'1440px',xxxl:'1560px' }} w="100%" px="40px">
         <Box >
           <Text
             fontWeight="600"
-            fontSize="44px"
-            lineHeight="56px"
+            fontSize={{base:'22px',lg:'26px',xl:'28px',xxl:'33px',xxxl:'44px'}}
+            lineHeight={{base:'32px',lg:'34px',xl:'36px',xxl:'46px',xxxl:'56px'}}
             color="#FFFFFF"
             mb="7px"
             fontFamily="inter"
@@ -50,7 +50,7 @@ const BlogSection = forwardRef((props, ref) => {
           </Text>
         </Box>
         <Grid
-py="60px"
+py={{ base: '20px',md:'30px' ,lg: '40px',xl:'60px' }}
           templateColumns={{
             base: "repeat(1, 1fr)",
             md: "repeat(2, 1fr)",

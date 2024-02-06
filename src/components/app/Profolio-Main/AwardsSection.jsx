@@ -51,7 +51,7 @@ const AwardsSection = forwardRef((props, ref) => {
   });
   return (
     <animated.div style={animationProps}>
-    <Box bg="#242424" pb={{ base: "100px", lg: "120px" }} ref={ref}>
+    <Box bg="#242424" py={{ base: '40px',md:'50px' ,lg: '60px',xl:'147px' }} ref={ref}>
     <Box mx="auto" maxW={{ base: "480px", md: "768px", lg: "991px",xl:'1280px',xxl:'1440px',xxxl:'1560px' }} w="100%" px="40px">
         <Flex w="100%" gap="24px" flexDirection={{base:'column',lg:'row'}}>
           <Box w={{base:'100%',lg:'50%'}}>
@@ -173,7 +173,7 @@ const AwardsSection = forwardRef((props, ref) => {
             {Awards.map((li) => (
             <Flex
             _last={{mb:"0px"}}
-            mb="65px"
+            mb={{base:'44px',xl:'46px',xxl:'65px'}}
               w="100%"
               alignItems={"center"}
               justifyContent={"center"}
