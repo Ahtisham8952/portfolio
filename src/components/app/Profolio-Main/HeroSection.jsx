@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Image, Text } from "@chakra-ui/react";
 import { MotionBox } from '@chakra-ui/react';
 import React, { forwardRef } from 'react';
 import { useSpring, animated } from 'react-spring';
@@ -14,14 +14,21 @@ const HeroSection = forwardRef((props, ref) => {
 
    
     <Box ref={ref}>
+      <Box>
+        <Image display={{base:'block',lg:'none'}} src="/philipcenter.png"></Image>
+      </Box>
+      <Box bg="#0E0E0E">
+
+    
       <Box
-        backgroundImage="url('./hero-banner.png')"
+        backgroundImage={{base:'none',lg:"url('./hero-banner.png')"}}
         backgroundSize="cover"
         backgroundPosition="right"
         backgroundRepeat="no-repeat"
         width="100%"
         // height="631px"
-        h={{base:'600px',md:'600px',lg:'441px',xl:'519px',xxl:'572px',xxxl:'631'}}
+        h={{base:'auto',md:'auto',lg:'400',xl:'519px',xxl:'572px',xxxl:'631'}}
+        py={{base:'30px',lg:'0px'}}
       >
         <Box
           mx="auto"
@@ -39,7 +46,7 @@ const HeroSection = forwardRef((props, ref) => {
               <Box mb="27px">
             <Text
               fontWeight="600"
-              fontSize="44px"
+              fontSize={{base:'22px',lg:'26px',xl:'28px',xxl:'33px',xxxl:'44px'}}
               lineHeight="56px"
               color="#FFFFFF"
               mb="7px"
@@ -63,7 +70,7 @@ const HeroSection = forwardRef((props, ref) => {
             <Box mb="27px">
             <Text
               fontWeight="600"
-              fontSize="44px"
+              fontSize={{base:'22px',lg:'26px',xl:'28px',xxl:'33px',xxxl:'44px'}}
               lineHeight="56px"
               color="#FFFFFF"
               mb="7px"
@@ -86,6 +93,7 @@ am eager to dedicate my life to transforming lives through innovation.
            
           </Box>
         </Box>
+      </Box>
       </Box>
     </Box>
     </animated.div>

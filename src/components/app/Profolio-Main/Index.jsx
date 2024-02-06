@@ -7,6 +7,7 @@ import BlogSection from './BlogSection';
 import FeaturedVideos from './FeaturedVideos';
 import AwardsSection from './AwardsSection';
 import TestimonialSection from './TestimonialSection';
+import GetinTouch from './GetinTouch';
 
 export const Philipfolio = () => {
   const heroRef = useRef(null);
@@ -37,8 +38,10 @@ export const Philipfolio = () => {
         <FeaturedVideos ref={featuredVideosRef} />
         <AwardsSection ref={awardsRef} />
         <TestimonialSection ref={testimonialRef} />
+        <GetinTouch/>
       </Box>
       <Box
+      
         gap="20px"
         border="1px solid #FFFFFF"
         borderRadius="30px"
@@ -47,7 +50,7 @@ export const Philipfolio = () => {
         transform="translateY(-50%)"
         p="20px"
         top="50%"
-        display="flex"
+        display={{base:'none',lg:'flex'}}
         flexDirection="column"
       >
          <Tooltip label="Home" aria-label="Home" placement="left" hasArrow>

@@ -12,7 +12,7 @@ const TestimonialSection = forwardRef((props, ref) => {
   
 
   return (
-    <Box bg="#242424" py={{ base: "100px", lg: "120px" }} ref={ref}>
+    <Box bg="#242424" pt={{ base: "100px", lg: "120px" }} ref={ref}>
       <Box mx="auto" maxW={"1566px"} w="100%" px="40px">
         <Box>
          
@@ -31,7 +31,7 @@ const TestimonialSection = forwardRef((props, ref) => {
         </Box>
       </Box>
       <Box
-        my="60px"
+        mt="60px"
         backgroundImage="url('./vediosliderbg.png')"
         backgroundSize="cover"
         backgroundPosition="right"
