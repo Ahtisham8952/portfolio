@@ -83,7 +83,7 @@ export const Philipfolio = () => {
         </Tooltip>
         <Tooltip label="Testimonials" aria-label="Testimonials" placement="left" hasArrow>
         <Box onClick={() => { scrollToRef(testimonialRef); handleSetActiveSection(testimonialRef); }}>
-          <Image src={activeSection === testimonialRef ? "/subgreen5.svg" : "/Testimonialicon.svg"} />
+          <Image src={activeSection === testimonialRef ? "/subgreen5.svg" : "/techcalls.svg"} />
         </Box>
         </Tooltip>
         <Tooltip label="Conatct us" aria-label="Conatct us" placement="left" hasArrow>
