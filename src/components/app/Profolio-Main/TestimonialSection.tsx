@@ -1,33 +1,31 @@
-import React, { forwardRef, useEffect, useState } from 'react';
+import React, { forwardRef } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { Box, Text } from "@chakra-ui/react";
 import TestimonialCards from './TestimonialCards';
 
-
-const TestimonialSection = forwardRef((props, ref) => {
- 
-
-  
-
-  
+const TestimonialSection = forwardRef<HTMLDivElement>((props, ref) => {
+  const animationProps = useSpring({
+    opacity: 1,
+    transform: 'translateY(0)',
+    from: { opacity: 0, transform: 'translateY(50px)' },
+    delay: 400, // Adjust delay as needed
+  });
 
   return (
     <Box bg="#242424" pt={{ base: '40px',md:'50px' ,lg: '60px',xl:'147px' }} ref={ref}>
       <Box mx="auto" maxW={"1566px"} w="100%" px="40px">
         <Box>
-         
-            <Text
-              fontWeight="600"
-              fontSize={{base:'22px',lg:'26px',xl:'28px',xxl:'33px',xxxl:'44px'}}
-              lineHeight={{base:'32px',lg:'34px',xl:'36px',xxl:'46px',xxxl:'56px'}}
-              color="#FFFFFF"
-              mb="7px"
-              fontFamily="inter"
-              textAlign={"center"}
-            >
-           Testimonials
-            </Text>
-         
+          <Text
+            fontWeight="600"
+            fontSize={{base:'22px',lg:'26px',xl:'28px',xxl:'33px',xxxl:'44px'}}
+            lineHeight={{base:'32px',lg:'34px',xl:'36px',xxl:'46px',xxxl:'56px'}}
+            color="#FFFFFF"
+            mb="7px"
+            fontFamily="inter"
+            textAlign={"center"}
+          >
+            Testimonials
+          </Text>
         </Box>
       </Box>
       <Box
@@ -45,7 +43,7 @@ const TestimonialSection = forwardRef((props, ref) => {
       >
         <Box mx="auto" maxW={"1566px"} w="100%" >
           <Box>
-           <TestimonialCards/>
+            <TestimonialCards/>
           </Box>
         </Box>
       </Box>

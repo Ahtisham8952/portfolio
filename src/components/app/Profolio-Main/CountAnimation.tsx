@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Text } from '@chakra-ui/react';
-import PropTypes from 'prop-types'; // Import PropTypes
 
-function CountAnimation({ targetCount, duration, Name }) {
+interface CountAnimationProps {
+  targetCount: number;
+  duration: number;
+  Name: string;
+}
+
+function CountAnimation({ targetCount, duration, Name }: CountAnimationProps) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    let startTime = null;
+    let startTime: number | null = null;
 
-    const animateCount = (timestamp) => {
+    const animateCount = (timestamp: number) => {
       if (!startTime) startTime = timestamp;
       const elapsedTime = timestamp - startTime;
 
@@ -22,6 +27,10 @@ function CountAnimation({ targetCount, duration, Name }) {
     };
 
     requestAnimationFrame(animateCount);
+
+    return () => {
+      startTime = null;
+    };
   }, [targetCount, duration]);
 
   return (
@@ -31,7 +40,7 @@ function CountAnimation({ targetCount, duration, Name }) {
         fontSize={{ base: '22px', lg: '32px' }}
         lineHeight="150%"
         color="#FFFFFF"
-        textAlign={"center"}
+        textAlign="center"
       >
         {Math.round(count).toLocaleString()}+
       </Text>
@@ -41,12 +50,5 @@ function CountAnimation({ targetCount, duration, Name }) {
     </Box>
   );
 }
-
-// Add PropTypes validation
-CountAnimation.propTypes = {
-  targetCount: PropTypes.number.isRequired,
-  duration: PropTypes.number.isRequired,
-  Name: PropTypes.string.isRequired,
-};
 
 export default CountAnimation;

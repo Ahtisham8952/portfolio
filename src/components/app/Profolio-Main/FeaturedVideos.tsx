@@ -1,31 +1,13 @@
-import React, { forwardRef, useEffect, useState } from 'react';
+import React, { forwardRef, useEffect, useState, RefObject } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { Box, Text } from "@chakra-ui/react";
 import VideoSlider from "./VideoSlider";
 
-const FeaturedVideos = forwardRef((props, ref) => {
+const FeaturedVideos = forwardRef<HTMLDivElement>((props, ref) => {
   const [isVisible, setIsVisible] = useState(false);
   const [triggered, setTriggered] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            setTriggered(true);
-          }
-        });
-      },
-      { threshold: 0.5 } // Adjust the threshold as needed
-    );
-
-    observer.observe(ref.current);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [ref]);
+ 
 
   const animationProps = useSpring({
     opacity: isVisible ? 1 : 0,
@@ -38,11 +20,11 @@ const FeaturedVideos = forwardRef((props, ref) => {
     <Box bg="#242424" py={{ base: '40px',md:'50px' ,lg: '60px',xl:'147px' }} ref={ref}>
       <Box mx="auto" maxW={{ base: "480px", md: "768px", lg: "991px",xl:'1280px',xxl:'1440px',xxxl:'1560px' }} w="100%" px="40px">
         <Box>
-          <animated.div style={animationProps}>
+          <animated.div >
             <Text
               fontWeight="600"
               fontSize={{base:'22px',lg:'26px',xl:'28px',xxl:'33px',xxxl:'44px'}}
-            lineHeight={{base:'32px',lg:'34px',xl:'36px',xxl:'46px',xxxl:'56px'}}
+              lineHeight={{base:'32px',lg:'34px',xl:'36px',xxl:'46px',xxxl:'56px'}}
               color="#FFFFFF"
               mb="7px"
               fontFamily="inter"
