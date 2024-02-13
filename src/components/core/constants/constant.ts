@@ -79,7 +79,7 @@ export interface Service {
   export const Services: Service[] = [
     {
       Image: './serviceicon.svg',
-      Title: 'Android Development:',
+      Title: 'Android Development',
       Description: 'Building innovative Android solutions for seamless user experiences across devices.',
     },
     {

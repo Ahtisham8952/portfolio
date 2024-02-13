@@ -58,7 +58,7 @@ const ServicesSection = forwardRef<HTMLDivElement>((props, ref) => {
                     <Box >
                       <Text
                         mb={{ base: '12px', md: '16px', xl: '23px' }}
-                        maxW={"234px"}
+                      
                         fontWeight="500"
                         fontFamily="inter"
                         fontSize={{
