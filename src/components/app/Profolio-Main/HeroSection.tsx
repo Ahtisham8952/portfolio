@@ -67,7 +67,7 @@ const HeroSection = forwardRef<HTMLDivElement, HeroSectionProps>((props, ref) =>
                     color="#FFFFFF"
                     fontFamily="inter"
                   >
-                    Thought Leader, Tech Entrepreneur, Investor
+                  Co-Founder CTO of Lion MGT LLC, Lion Pro Dev DBA.
                   </Text>
                 </Box>
 

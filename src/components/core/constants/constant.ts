@@ -15,66 +15,58 @@ export interface education {
   
   export const blogs: BlogPost[] = [
     {
-      Image: "./blogpostimg.png",
-      Title: "Can Pakistan still offer a promising future if you choose to stay here?",
-      Description: "In the last five years, one thing has become quite clear: for Pakistan to maintain high sustainable growth, it needs dollars, especially through exports. That’s where the IT sector has stood out: without much governmental support,",
+      Image: "./zender.jpg",
+      Title: "Mastering Digital Presence: A Comprehensive Guide to Mobile and Web Development Strategies",
+      Description: " This blog will explore the latest trends, tools, and techniques in mobile application development and web development. It will cover topics such as responsive design, user experience optimization, cross-platform development, and more. Additionally, it will delve into how a strong digital presence contributes to brand visibility and customer engagement.",
     },
     {
-      Image: "./blogpostimg.png",
-      Title: "Can Pakistan still offer a promising future if you choose to stay here?",
-      Description: "In the last five years, one thing has become quite clear: for Pakistan to maintain high sustainable growth, it needs dollars, especially through exports. That’s where the IT sector has stood out: without much governmental support,",
+      Image: "./zender.jpg",
+      Title: "Unleashing Brand Potential: The Power of Social Media Marketing and Customer Service",
+      Description: " This blog will focus on the importance of social media marketing and exceptional customer service in building and nurturing brands. It will discuss strategies for leveraging social media platforms to connect with audiences, drive brand awareness, and foster meaningful relationships. Additionally, it will delve into the role of customer service in brand reputation management and customer retention.",
     },
     {
-      Image: "./blogpostimg.png",
-      Title: "Can Pakistan still offer a promising future if you choose to stay here?",
-      Description: "In the last five years, one thing has become quite clear: for Pakistan to maintain high sustainable growth, it needs dollars, especially through exports. That’s where the IT sector has stood out: without much governmental support,",
+      Image: "./zender.jpg",
+      Title: "Crafting Brand Excellence: Strategies for Effective Brand Marketing and Design",
+      Description: " This blog will explore the fundamental principles and strategies behind successful brand marketing and design. It will cover topics such as brand identity development, storytelling, visual branding, and brand consistency. Furthermore, it will discuss how effective brand marketing and design contribute to brand differentiation, loyalty, and long-term success.",
     },
   ];
   
   export const education: education[] = [
+    
     {
-      date: " 2016-2016",
-      Uni: "Stanford University United States",
-      Degree: "Technology Entrepreneurship",
-    },
-    {
-      date: " 2012-2014",
-      Uni: "LUMS Pakistan",
+      date: " 2008 - 2013",
+      Uni: "University of Southern Maine - Portland",
       Degree: "Masters in Computer Science",
     },
     {
-      date: " 2004-2008",
-      Uni: "FAST-NUCES Pakistan",
-      Degree: "Bachelors in Computer Science",
+      date: " 1997 - 2001",
+      Uni: "Clarkson University",
+      Degree: "B.S; Masters, Management Information Systems; Computer Science",
     },
   ];
   
   export const Awards: Award[] = [
     {
-      AwardName: "CEO Excellence Award by CEO Club and Governor of Punjab",
+      AwardName: "Best Dad In the Whole Wide World of Maine",
     },
     {
-      AwardName: "Best CEO of the Year at Growth Summit 2023",
+      AwardName: "Eagle Scout",
     },
-    {
-      AwardName: "Best Tech Company of the Year at Growth Summit 2023",
-    },
-    {
-      AwardName: "Commendation Award by the Punjab Government",
-    },
+   
+   
   ];
   export const reviews = [
     {
-      Image: './testimonialsub1.png',
-      Title: 'Usman was an amazing technical partner as we grew Concert.His rapid prototyping and testing helped us deliver first-in- category features in a competitive landscape. As we began to see success, and grew rapidly, Usman helped us recruit excellent talent very quickly, and helped us prioritize an increasingly complex roadmap. Usman’s startup leadership helped us scale and sell the business in just a few years- he’d be an incredible asset to anyone’s team!',
-      Designation:'2x Founder, CFO, Sales Coach,Incentive Comp',
-      Name: 'Sanj Sanampudi',
+      Image: './habiba.jpg',
+      Title: 'Positivity, professionalism and strong work ethic are the words that clearly define Philip. I have had the pleasure of working with him on several design projects and looking forward to creating more magic together.🙌',
+      Designation:'User Experience / interface designer',
+      Name: 'Habiba Gillani',
     },
     {
-      Image: './testimonialsub2.png',
-      Title: 'I’ve known Usman for years in the tech and startup world. His visionary leadership transformed his company, growing it from 200 to over 1500 professionals in just two years. Usman’s passion for education is truly inspiring, turning dreams into reality. He’s a bold, solution-driven leader who empowers change and fosters responsibility.',
-      Designation:'Senior Software Engineer,Microsoft',
-      Name: 'Abdullah Ansari',
+      Image: './hudson.jpg',
+      Title: 'Philip is an exceptional professional whose dedication and expertise have consistently impressed me. His deep understanding of the software industry and his ability to navigate complex technical challenges are truly commendable. Whenever we encounter obstacles or face difficult decisions, Philips sharp analytical skills and strategic thinking always come to the forefront, providing us with valuable insights and solutions.',
+      Designation:'Founder & CEO at MH TECHNOLOGIES',
+      Name: 'Syed Subhan Gillani (Mark Hudson)',
     },
   ];
 
@@ -87,23 +79,23 @@ export interface Service {
   export const Services: Service[] = [
     {
       Image: './serviceicon.svg',
-      Title: 'Brand Strategy & Art Direction',
-      Description: 'Creating a higher spacing and how people move through a unique',
+      Title: 'Android Development:',
+      Description: 'Building innovative Android solutions for seamless user experiences across devices.',
     },
     {
       Image: './serviceicon.svg',
-      Title: 'Brand Strategy & Art Direction',
-      Description: 'Creating a higher spacing and how people move through a unique',
+      Title: 'Web Development',
+      Description: 'Developing dynamic web solutions to enhance online presence and user interaction.',
     },
     {
       Image: './serviceicon.svg',
-      Title: 'Brand Strategy & Art Direction',
-      Description: 'Creating a higher spacing and how people move through a unique',
+      Title: 'Brand Marketing',
+      Description: 'Strategically promoting brands to captivate audiences and drive impactful engagement.',
     },
     {
       Image: './serviceicon.svg',
-      Title: 'Brand Strategy & Art Direction',
-      Description: 'Creating a higher spacing and how people move through a unique',
+      Title: 'Brand Design',
+      Description: 'Crafting visually compelling brand identities to resonate authentically with audiences.',
     }
   ];
   

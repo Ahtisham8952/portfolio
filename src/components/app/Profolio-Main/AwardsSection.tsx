@@ -16,12 +16,13 @@ const AwardsSection = forwardRef<HTMLDivElement>((props, ref) => {
 
   return (
     <animated.div style={animationProps}>
-      <Box bg="#242424" py={{ base: '40px', md: '50px', lg: '60px', xl: '147px' }} ref={ref}>
+      <Box bg="#242424" py={{ base: '40px', md: '50px', lg: '60px', xl: '100px' }} ref={ref}>
         <Box mx="auto" maxW={{ base: "480px", md: "768px", lg: "991px", xl: '1280px', xxl: '1440px', xxxl: '1560px' }} w="100%" px="40px">
           <Flex w="100%" gap="24px" flexDirection={{ base: 'column', lg: 'row' }}>
-            <Box w={{ base: '100%', lg: '50%' }}>
+            <Box w={{ base: '100%', lg: '50%' }} >
 
               <Box
+              h={{base:'auto',lg:'420px'}}
                 border="1px solid rgba(255, 255, 255, 0.4)"
                 bg="transparent"
                 borderRadius={"8px"}
@@ -90,9 +91,10 @@ const AwardsSection = forwardRef<HTMLDivElement>((props, ref) => {
               </Box>
 
             </Box>
-            <Box w={{ base: '100%', lg: '50%' }}>
+            <Box w={{ base: '100%', lg: '50%' }} >
 
               <Box
+              h={{base:'auto',lg:'420px'}}
                 border="1px solid rgba(255, 255, 255, 0.4)"
                 bg="transparent"
                 borderRadius={"8px"}

@@ -38,6 +38,7 @@ const TestimonialCards = () => {
               <Flex flexDirection={{ base: 'column', lg: 'row' }} h="100%" w="100%" alignItems={{ base: 'center', lg: 'flex-start' }} gap={{ base: '20px', md: '20px', lg: '20px', xl: '20px', xxl: '20px' }}>
                 <Box w="100%" display={"flex"} justifyContent={{ base: 'center', lg: 'flex-start' }}>
                   <Image
+                  borderRadius={"50%"}
                     w={{ base: '40px', md: '40px', lg: '65px', xl: '65px', xxl: '94px' }}
                     h={{ base: '40px', md: '40px', lg: '65px', xl: '65px', xxl: '94px' }}
                     src={li.Image} />
