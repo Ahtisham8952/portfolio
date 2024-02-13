@@ -9,6 +9,8 @@ import AwardsSection from './AwardsSection';
 import TestimonialSection from './TestimonialSection';
 import GetinTouch from './GetinTouch';
 
+import MobileSideBar from './MobileSideBar';
+
 export const Philipfolio = () => {
   const heroRef = useRef(null);
   const servicesRef = useRef(null);
@@ -31,7 +33,26 @@ export const Philipfolio = () => {
   };
 
   return (
+    <>
+   
+   
     <Box position="relative">
+      <Box display={{base:'block',md:'block',lg:'none'}} position={"fixed"} zIndex={"1"} right="50px" top='50px'>
+
+      
+      <MobileSideBar
+            scrollToRef={scrollToRef}
+            handleSetActiveSection={handleSetActiveSection}
+            heroRef={heroRef}
+            servicesRef={servicesRef}
+            blogRef={blogRef}
+            featuredVideosRef={featuredVideosRef}
+            awardsRef={awardsRef}
+            testimonialRef={testimonialRef}
+            contactRef={contactRef}
+          />
+
+      </Box>
       <Box>
         <HeroSection 
         ref={heroRef}
@@ -97,5 +118,6 @@ export const Philipfolio = () => {
         </Tooltip>
       </Box>
     </Box>
+    </>
   );
 };
