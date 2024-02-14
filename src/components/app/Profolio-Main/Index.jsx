@@ -37,7 +37,7 @@ export const Philipfolio = () => {
    
    
     <Box position="relative">
-      <Box display={{base:'block',md:'block',lg:'none'}} position={"fixed"} zIndex={"1"} right="50px" top='50px'>
+      <Box display={{base:'block',md:'block',lg:'none'}} position={"fixed"} zIndex={"1"} right="35px" top='35px'>
 
       
       <MobileSideBar

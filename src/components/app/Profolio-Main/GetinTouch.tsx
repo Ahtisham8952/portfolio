@@ -61,7 +61,7 @@ const GetInTouch = forwardRef((props, ref: Ref<HTMLDivElement>) => {
                   mb="7px"
                   fontFamily="inter"
                 >
-                  Hi@Philip Cutting.com
+                 cuttingphilip@gmail.com
                 </Text>
               </Box>
               <Flex gap="8px">

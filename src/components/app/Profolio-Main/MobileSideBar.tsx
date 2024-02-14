@@ -23,7 +23,7 @@ function MobileSideBar({ scrollToRef, handleSetActiveSection, heroRef, servicesR
 
   return (
     <>
-      <Button colorScheme='transparent' w="55px" h="55px" border='1px solid #575757' borderRadius={"50%"} onClick={onOpen}>
+      <Button colorScheme='transparent' w={{base:'35px',md:'35px',lg:'55px'}} h={{base:'35px',md:'35px',lg:'55px'}} border='1px solid #575757' borderRadius={"50%"} onClick={onOpen}>
         <HamburgerIcon />
       </Button>
       <Drawer
@@ -50,9 +50,9 @@ function MobileSideBar({ scrollToRef, handleSetActiveSection, heroRef, servicesR
             <Box pt="20px">
               <Text
                 fontWeight="500"
-                fontSize="16px"
+                fontSize="14px"
                 lineHeight="26px"
-                color="#CCCCCC"
+                color="white"
                 mb="7px"
                 cursor="pointer"
                 _hover={{ color: "#FFFFFF" }}
@@ -62,9 +62,9 @@ function MobileSideBar({ scrollToRef, handleSetActiveSection, heroRef, servicesR
               </Text>
               <Text
                 fontWeight="500"
-                fontSize="16px"
+                fontSize="14px"
                 lineHeight="26px"
-                color="#CCCCCC"
+                color="white"
                 mb="7px"
                 cursor="pointer"
                 _hover={{ color: "#FFFFFF" }}
@@ -72,7 +72,66 @@ function MobileSideBar({ scrollToRef, handleSetActiveSection, heroRef, servicesR
               >
                 Services
               </Text>
-              {/* Add similar entries for other sections */}
+              <Text
+                fontWeight="500"
+                fontSize="14px"
+                lineHeight="26px"
+                color="white"
+                mb="7px"
+                cursor="pointer"
+                _hover={{ color: "#FFFFFF" }}
+                onClick={() => handleScrollToSection(blogRef)}
+              >
+                Blog
+              </Text>
+              <Text
+                fontWeight="500"
+                fontSize="14px"
+                lineHeight="26px"
+                color="white"
+                mb="7px"
+                cursor="pointer"
+                _hover={{ color: "#FFFFFF" }}
+                onClick={() => handleScrollToSection(featuredVideosRef)}
+              >
+              Featured Videos
+              </Text>
+              <Text
+                fontWeight="500"
+                fontSize="14px"
+                lineHeight="26px"
+                color="white"
+                mb="7px"
+                cursor="pointer"
+                _hover={{ color: "#FFFFFF" }}
+                onClick={() => handleScrollToSection(awardsRef)}
+              >
+           Awards
+              </Text>
+              <Text
+                fontWeight="500"
+                fontSize="14px"
+                lineHeight="26px"
+                color="white"
+                mb="7px"
+                cursor="pointer"
+                _hover={{ color: "#FFFFFF" }}
+                onClick={() => handleScrollToSection(testimonialRef)}
+              >
+           Testimonial
+              </Text>
+              <Text
+                fontWeight="500"
+                fontSize="14px"
+                lineHeight="26px"
+                color="white"
+                mb="7px"
+                cursor="pointer"
+                _hover={{ color: "#FFFFFF" }}
+                onClick={() => handleScrollToSection(contactRef)}
+              >
+          Contact us
+              </Text>
             </Box>
           </Box>
         </DrawerContent>
