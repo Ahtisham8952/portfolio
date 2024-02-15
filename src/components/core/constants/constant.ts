@@ -15,17 +15,17 @@ export interface education {
   
   export const blogs: BlogPost[] = [
     {
-      Image: "./zender.jpg",
+      Image: "./blogimage1.png",
       Title: "Mastering Digital Presence: A Comprehensive Guide to Mobile and Web Development Strategies",
       Description: " This blog will explore the latest trends, tools, and techniques in mobile application development and web development. It will cover topics such as responsive design, user experience optimization, cross-platform development, and more. Additionally, it will delve into how a strong digital presence contributes to brand visibility and customer engagement.",
     },
     {
-      Image: "./zender.jpg",
+      Image: "./blogimage2.png",
       Title: "Unleashing Brand Potential: The Power of Social Media Marketing and Customer Service",
       Description: " This blog will focus on the importance of social media marketing and exceptional customer service in building and nurturing brands. It will discuss strategies for leveraging social media platforms to connect with audiences, drive brand awareness, and foster meaningful relationships. Additionally, it will delve into the role of customer service in brand reputation management and customer retention.",
     },
     {
-      Image: "./zender.jpg",
+      Image: "./blogimage3.png",
       Title: "Crafting Brand Excellence: Strategies for Effective Brand Marketing and Design",
       Description: " This blog will explore the fundamental principles and strategies behind successful brand marketing and design. It will cover topics such as brand identity development, storytelling, visual branding, and brand consistency. Furthermore, it will discuss how effective brand marketing and design contribute to brand differentiation, loyalty, and long-term success.",
     },
@@ -78,24 +78,29 @@ export interface Service {
   
   export const Services: Service[] = [
     {
-      Image: './serviceicon.svg',
-      Title: 'Android Development',
-      Description: 'Building innovative Android solutions for seamless user experiences across devices.',
+      Image: './servicesave1.svg',
+      Title: 'Mobile App Development',
+      Description: 'Crafting intuitive mobile solutions tailored to your needs, enhancing user experiences on-the-go.',
     },
     {
-      Image: './serviceicon.svg',
-      Title: 'Web Development',
-      Description: 'Developing dynamic web solutions to enhance online presence and user interaction.',
+      Image: './servicesave2.svg',
+      Title: 'Website Developmet',
+      Description: 'Building engaging digital platforms that showcase your brand and drive results with cutting-edge design and functionality.',
     },
     {
-      Image: './serviceicon.svg',
+      Image: './servicesave3.svg',
+      Title: 'Startup Consultant',
+      Description: ' Guiding aspiring entrepreneurs with strategic insights and practical advice to navigate the complexities of launching and scaling their ventures successfully.',
+    },
+    {
+      Image: './servicesave4.svg',
       Title: 'Brand Marketing',
-      Description: 'Strategically promoting brands to captivate audiences and drive impactful engagement.',
+      Description: 'Amplifying brand visibility and resonance through targeted strategies that resonate with your audience and drive meaningful engagement.',
     },
     {
-      Image: './serviceicon.svg',
+      Image: './servicesave5.svg',
       Title: 'Brand Design',
-      Description: 'Crafting visually compelling brand identities to resonate authentically with audiences.',
+      Description: 'Crafting compelling visual identities that communicate your brand story authentically and leave a lasting impression on your audience.',
     }
   ];
   

@@ -27,7 +27,7 @@ const ServicesSection = forwardRef<HTMLDivElement>((props, ref) => {
               fontFamily="inter"
               textAlign={"center"}
             >
-              Our Services
+           Things That I Do
             </Text>
           </Box>
           <Grid
