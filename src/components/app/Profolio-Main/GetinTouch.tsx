@@ -51,7 +51,7 @@ const GetInTouch = forwardRef((props, ref: Ref<HTMLDivElement>) => {
                   mb="7px"
                   fontFamily="inter"
                 >
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                 Let's discuss how I can help bring your ideas to life.
                 </Text>
                 <Text
                   fontWeight="600"

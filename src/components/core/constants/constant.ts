@@ -84,7 +84,7 @@ export interface Service {
     },
     {
       Image: './servicesave2.svg',
-      Title: 'Website Developmet',
+      Title: 'Web App Developmet',
       Description: 'Building engaging digital platforms that showcase your brand and drive results with cutting-edge design and functionality.',
     },
     {

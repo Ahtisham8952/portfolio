@@ -21,7 +21,7 @@ const ProjectsSection: React.FC = () => {
               fontFamily="inter"
               textAlign={"center"}
             >
-           Insight in 2023
+           Insights in 2023
             </Text>
         </Box>
       
