@@ -94,13 +94,13 @@ export interface Service {
     },
     {
       Image: './servicesave4.svg',
-      Title: 'Brand Marketing',
-      Description: 'Amplifying brand visibility and resonance through targeted strategies that resonate with your audience and drive meaningful engagement.',
+      Title: 'Startup Investor',
+      Description: 'As a seasoned startup investor, I specialize in providing strategic insights and actionable advice, guiding aspiring entrepreneurs towards successful launches and sustainable growth.',
     },
-    {
-      Image: './servicesave5.svg',
-      Title: 'Brand Design',
-      Description: 'Crafting compelling visual identities that communicate your brand story authentically and leave a lasting impression on your audience.',
-    }
+    // {
+    //   Image: './servicesave5.svg',
+    //   Title: 'Brand Design',
+    //   Description: 'Crafting compelling visual identities that communicate your brand story authentically and leave a lasting impression on your audience.',
+    // }
   ];
   
